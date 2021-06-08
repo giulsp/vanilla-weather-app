@@ -1,1 +1,66 @@
 /*comment*/
+body {
+  font-family: arial,sans-serif;
+}
+
+img{
+  display: inline-block;
+  height:60px;
+  width:60px;
+  vertical-align: top;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none; /*removes bullet point*/
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper{
+max-width:600px;
+margin: 30px auto;
+padding: 20px;
+border: 1px solid #dadce0;
+border-radius: 5px;
+}
+
+.city {
+  font-size: 22px;
+  color:#202124;
+  line-height: 26px;
+}
+
+.date, .description {
+  color: #70757a;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.city-column{
+  text-align: right;
+}
+
+.weather-column{
+  color: #70757a;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#temperature {
+  color: #202124;
+  line-height: 60px;
+  font-size: 48px;
+}
+
+#celsius, #fahrenheit{
+  color: #202124;
+  line-height: 24px;
+  font-size: 16px;
+  vertical-align: top;
+  display:inline-block;
+}
