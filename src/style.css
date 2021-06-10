@@ -42,13 +42,15 @@ border-radius: 5px;
 }
 
 .city-column{
-  text-align: right;
+  text-align: left;
 }
 
 .weather-column{
   color: #70757a;
   font-size: 12px;
   line-height: 16px;
+  position: relative;
+  left: 20px;
 }
 
 #temperature {
@@ -60,7 +62,13 @@ border-radius: 5px;
 #celsius, #fahrenheit{
   color: #202124;
   line-height: 24px;
-  font-size: 16px;
-  vertical-align: top;
+  font-size: 14px;
   display:inline-block;
+  position: relative;
+  top: -22px;
+  left: -12px;
+}
+
+.code {
+  margin-top: 50px;
 }

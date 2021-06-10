@@ -13,19 +13,6 @@
   <div class="container">
   <div class="app-wrapper">
     <div class="row">
-       <div class="col-4">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun and clouds"/>
-        <span id="temperature" > 23 </span>
-        <span id="celsius">°C | </span> <span id="fahrenheit">°F </span>
-      </div>
-      
-      <div class="col-4">
-        <ul class="weather-column">
-          <li>Precipitation: 2% </li>
-          <li>Humidty: 73%</li>
-          <li>Wind: 11 km/h</li>
-        </ul>
-      </div>
 
       <div class="col-4">
         <ul class="city-column">
@@ -41,10 +28,29 @@
         </ul>
       </div>
 
+       <div class="col-5">
+         <div class="clearfix">
+        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun and clouds"/>
+        <span id="temperature" > 23 </span>
+        <span id="celsius">°C | </span> <span id="fahrenheit">°F </span>
+      </div>
+      </div>
+      
+      <div class="col-3">
+        <ul class="weather-column">
+          <li>Precipitation: 2% </li>
+          <li>Humidty: 73%</li>
+          <li>Wind: 11 km/h</li>
+        </ul>
+      </div>
+
+      
       </div><!--row-->
-  <small>
+  <div class="code">
+      <small id="coder">
     <a href="https://github.com/giulsp/vanilla-weather-app" target="_blank">Open-source code</a> by Giulia Presa.
   </small>
+</div>
 </div> <!--wrapper-->
 </div><!--container-->
 
