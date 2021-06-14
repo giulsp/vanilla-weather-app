@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="src/style.css">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <title>Weather App</title>
 </head>
 <body>
@@ -17,13 +18,13 @@
 
       <div class="col-4">
         <ul class="city-column">
-          <li class="city">
+          <li id="city">
             Valencia
           </li>
-          <li class="date">
+          <li id="date">
           Tuesday 10:00
           </li>
-          <li class="description">
+          <li id="description">
          Mostly cloudy
           </li>
         </ul>
@@ -32,9 +33,9 @@
        <div class="col-5">
          <div class="clearfix">
         <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="sun and clouds"/>
-        <span id="temperature" > 23 </span>
+        <span id="temperature" > 23</span>
         <span id="celsius">°C | </span> <span id="fahrenheit">°F </span>
-      </div>
+          </div>
       </div>
       
       <div class="col-3">
