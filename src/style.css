@@ -22,36 +22,16 @@ li{
   text-transform: capitalize;
 }
 
-.app-wrapper{
-max-width:600px;
-margin: 30px auto;
-padding: 20px;
-border: 1px solid #dadce0;
-border-radius: 5px;
-}
-
-.city {
+#city {
   font-size: 22px;
   color:#202124;
   line-height: 26px;
 }
 
-.date, .description {
+#date, #description {
   color: #70757a;
   font-size: 16px;
   line-height: 20px;
-}
-
-.city-column{
-  text-align: left;
-}
-
-.weather-column{
-  color: #70757a;
-  font-size: 12px;
-  line-height: 16px;
-  position: relative;
-  left: 20px;
 }
 
 #temperature {
@@ -68,6 +48,26 @@ border-radius: 5px;
   position: relative;
   top: -22px;
   left: -2px;
+}
+
+.app-wrapper{
+  max-width:600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  }
+
+.weather-column{
+  color: #70757a;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  left: 20px;
+}
+
+.city-column{
+  text-align: left;
 }
 
 .code {
