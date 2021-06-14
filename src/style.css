@@ -25,34 +25,6 @@ li:first-letter{
   text-transform: capitalize;
 }
 
-#city {
-  font-size: 22px;
-  color:#202124;
-  line-height: 26px;
-}
-
-#date, #description {
-  color: #70757a;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-#temperature {
-  color: #202124;
-  line-height: 60px;
-  font-size: 48px;
-}
-
-#celsius, #fahrenheit{
-  color: #202124;
-  line-height: 24px;
-  font-size: 14px;
-  display:inline-block;
-  position: relative;
-  top: -22px;
-  left: -2px;
-}
-
 .app-wrapper{
   max-width:600px;
   margin: 30px auto;
@@ -71,8 +43,33 @@ li:first-letter{
 
 .city-column{
   text-align: left;
+  color: #70757a;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .code {
   margin-top: 50px;
+}
+
+#city {
+  font-size: 22px;
+  color:#202124;
+  line-height: 26px;
+}
+
+#temperature {
+  color: #202124;
+  line-height: 60px;
+  font-size: 48px;
+}
+
+#celsius, #fahrenheit{
+  color: #202124;
+  line-height: 24px;
+  font-size: 14px;
+  display:inline-block;
+  position: relative;
+  top: -22px;
+  left: -2px;
 }
