@@ -49,7 +49,20 @@ function handleSubmit (event) {
   search (cityInputElement.value)
 }
 
+function displayFahrenheit (event) {
+  event.preventDefault ();
+  let temperatureElement = document.querySelector ("#temperature");
+  let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round (fahrenheitTemperature);
+
+}
+
+let celsius = null; //global variable
+
 let form = document.querySelector ("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheit = document.querySelector ("#fahrenheit-link");
+fahrenheit.addEventListener ("click", displayFahrenheit);
 
 search ("Madrid");

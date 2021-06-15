@@ -62,6 +62,7 @@ li:first-letter{
   color: #202124;
   line-height: 60px;
   font-size: 48px;
+  font-weight: lighter;
 }
 
 #celsius, #fahrenheit{
