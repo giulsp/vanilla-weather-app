@@ -27,7 +27,9 @@ function displayTemperature (response) {
   let dateElement = document.querySelector ("#date");
   let iconElement = document.querySelector ("#icon");
 
-  temperatureElement.innerHTML = Math.round (response.data.main.temp);
+  celsiusTemperature = response.data.main.temp; //local variable
+
+  temperatureElement.innerHTML = Math.round (celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -36,6 +38,8 @@ function displayTemperature (response) {
   iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute ("alt", response.data.weather[0].description);
   }
+
+
 
 function search (city) {
   let apiKey = "50d24603e09f450a85b01b98d6805e3d";
@@ -52,12 +56,12 @@ function handleSubmit (event) {
 function displayFahrenheit (event) {
   event.preventDefault ();
   let temperatureElement = document.querySelector ("#temperature");
-  let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round (fahrenheitTemperature);
 
 }
 
-let celsius = null; //global variable
+let celsiusTemperature = null; //global variable
 
 let form = document.querySelector ("#search-form");
 form.addEventListener("submit", handleSubmit);
