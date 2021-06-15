@@ -52,6 +52,16 @@ li:first-letter{
   margin-top: 50px;
 }
 
+.units{
+  color: #202124;
+  line-height: 24px;
+  font-size: 14px;
+  display:inline-block;
+  position: relative;
+  top: -22px;
+  left: -2px;
+}
+
 #city {
   font-size: 22px;
   color:#202124;
@@ -65,12 +75,3 @@ li:first-letter{
   font-weight: lighter;
 }
 
-#celsius, #fahrenheit{
-  color: #202124;
-  line-height: 24px;
-  font-size: 14px;
-  display:inline-block;
-  position: relative;
-  top: -22px;
-  left: -2px;
-}
