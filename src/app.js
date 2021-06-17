@@ -38,8 +38,15 @@ function displayTemperature (response) {
   iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute ("alt", response.data.weather[0].description);
   }
+  
+// 
+//function displayForecast {
+  // let forecastElement = document.querySelector ("#forecast");
+  //forecastElement = "Forecast";
+//}
+// NOT WORKING. MAYBE THE API IS BEING CALLED TOO MANY TIMES ?
 
-
+//displayForecast ();
 
 function search (city) {
   let apiKey = "50d24603e09f450a85b01b98d6805e3d";
@@ -66,6 +73,8 @@ function displayCelsius (event){
   let temperatureElement = document.querySelector ("#temperature");
   temperatureElement.innerHTML = Math.round (celsiusTemperature);
 }
+
+
 
 let celsiusTemperature = null; //global variable
 
