@@ -39,14 +39,16 @@ function displayTemperature (response) {
   iconElement.setAttribute ("alt", response.data.weather[0].description);
   }
   
-// 
-//function displayForecast {
-  // let forecastElement = document.querySelector ("#forecast");
-  //forecastElement = "Forecast";
-//}
+function displayForecast () {
+  let forecastElement = document.querySelector ("#forecast");
+  forecastElement.innerHTML = "Forecast";
+}
 // NOT WORKING. MAYBE THE API IS BEING CALLED TOO MANY TIMES ?
+// REPLACED IMAGE WITH GOOGLE IMAGE
+//added RESPONSE and red disappears but still not showing on my app
+// NOW IT´S WORKING
 
-//displayForecast ();
+displayForecast ();
 
 function search (city) {
   let apiKey = "50d24603e09f450a85b01b98d6805e3d";
@@ -73,8 +75,6 @@ function displayCelsius (event){
   let temperatureElement = document.querySelector ("#temperature");
   temperatureElement.innerHTML = Math.round (celsiusTemperature);
 }
-
-
 
 let celsiusTemperature = null; //global variable
 
