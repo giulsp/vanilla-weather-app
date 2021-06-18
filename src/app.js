@@ -18,6 +18,15 @@ function formatDate (timestamp){
   return `${day} ${hours}:${minutes}`;
 }
 
+function getForecast (coordinates) {
+  console.log (coordinates);
+  let apiKey = "50d24603e09f450a85b01b98d6805e3d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
+  
+  console.log (apiUrl);
+  axios.get (apiUrl).then(displayForecast);
+}
+
 function displayTemperature (response) {
   let temperatureElement = document.querySelector ("#temperature");
   let cityElement = document.querySelector ("#city");
@@ -37,9 +46,14 @@ function displayTemperature (response) {
   dateElement.innerHTML = formatDate (response.data.dt *1000);
   iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute ("alt", response.data.weather[0].description);
+
+  getForecast (response.data.coord);
+
   }
   
-function displayForecast () {
+function displayForecast (response) {
+  console.log (response.data.daily);
+
   let forecastElement = document.querySelector ("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -67,8 +81,9 @@ function displayForecast () {
 // REPLACED IMAGE WITH GOOGLE IMAGE
 //added RESPONSE and red disappears but still not showing on my app
 // NOW IT´S WORKING
+//displayForecast (); NOT NEEDED ANYMORE ?
 
-displayForecast ();
+
 
 function search (city) {
   let apiKey = "50d24603e09f450a85b01b98d6805e3d";
