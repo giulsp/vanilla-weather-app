@@ -52,23 +52,25 @@ function displayTemperature (response) {
   }
   
 function displayForecast (response) {
-  console.log (response.data.daily);
+ let forecast = response.data.daily;
 
   let forecastElement = document.querySelector ("#forecast");
 
   let forecastHTML = `<div class="row">`;
-
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach (function (day){
-    forecastHTML = forecastHTML + 
+  forecast.forEach (function (forecastDay) {
+    forecastHTML = 
+    forecastHTML + 
       `
       <div class="col-2">
         <div class="forecast-date">
-          ${day}
+          ${forecastDay.dt}
         </div>
-        <img src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png" alt="" width="5"/> <!--width is not being applied-->
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" 
+        alt="" 
+        width="5"/> 
         <div class="forecast-temperatures">
-          <span class="max"> 28 º </span> <span class="min"> 21 º </span>
+          <span class="max"> 28 ${forecastDay.temp.max}º </span> 
+          <span class="min"> 21${forecastDay.temp.min}º </span>
         </div>
       </div>
       `;
