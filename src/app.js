@@ -47,6 +47,7 @@ function displayTemperature (response) {
   iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute ("alt", response.data.weather[0].description);
 
+ 
   getForecast (response.data.coord);
 
   }
@@ -96,8 +97,6 @@ function displayForecast (response) {
 // NOW IT´S WORKING
 //displayForecast (); NOT NEEDED ANYMORE ?
 
-
-
 function search (city) {
   let apiKey = "50d24603e09f450a85b01b98d6805e3d";
   let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -113,5 +112,25 @@ function handleSubmit (event) {
 let form = document.querySelector ("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-
 search ("Madrid");
+
+//trying to make the Current Location button work
+
+function showPosition (position){
+  let apiKey ="50d24603e09f450a85b01b98d6805e3d";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getLocation (event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition (showPosition);
+}
+
+let currentLocationButton = document.querySelector ("#current-location-button");
+currentLocationButton.addEventListener = ("click", getLocation);
+
+showPosition ();
