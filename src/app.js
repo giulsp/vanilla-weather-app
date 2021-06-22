@@ -1,4 +1,4 @@
-//comment
+//Current time and date
 function formatDate (timestamp){
   let date = new Date (timestamp);
 
@@ -18,11 +18,10 @@ function formatDate (timestamp){
   return `${day} ${hours}:${minutes}`;
 }
 
+//Real time weather conditions
 function getForecast (coordinates) {
-  
   let apiKey = "50d24603e09f450a85b01b98d6805e3d";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
-  
   
   axios.get (apiUrl).then(displayForecast);
 }
@@ -47,9 +46,7 @@ function displayTemperature (response) {
   iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute ("alt", response.data.weather[0].description);
 
- 
   getForecast (response.data.coord);
-
   }
   
 function formatDay (timestamp){
@@ -61,8 +58,7 @@ function formatDay (timestamp){
 }
 
 function displayForecast (response) {
- let forecast = response.data.daily;
-
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector ("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -91,12 +87,8 @@ function displayForecast (response) {
   forecastHTML = forecastHTML + `</div>`
   forecastElement.innerHTML = forecastHTML;
 }
-// NOT WORKING. MAYBE THE API IS BEING CALLED TOO MANY TIMES ?
-// REPLACED IMAGE WITH GOOGLE IMAGE
-//added RESPONSE and red disappears but still not showing on my app
-// NOW IT´S WORKING
-//displayForecast (); NOT NEEDED ANYMORE ?
 
+//Search button
 function search (city) {
   let apiKey = "50d24603e09f450a85b01b98d6805e3d";
   let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -106,7 +98,7 @@ function search (city) {
 function handleSubmit (event) {
   event.preventDefault();
   let cityInputElement = document.querySelector ("#city-input");
-  search (cityInputElement.value)
+  search (cityInputElement.value);
 }
 
 let form = document.querySelector ("#search-form");
@@ -114,13 +106,12 @@ form.addEventListener("submit", handleSubmit);
 
 search ("Madrid");
 
-//trying to make the Current Location button work
-
-function showPosition (position){
+//Current Location button - NOT WORKING
+function showPosition (coordinates){
   let apiKey ="50d24603e09f450a85b01b98d6805e3d";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  let latitude = coordinates.lat;
+  let longitude = coordinates.lon;
+  let apiUrl =`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   
   axios.get(apiUrl).then(displayTemperature);
 }
