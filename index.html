@@ -52,7 +52,13 @@
       <div class="row">
 
         <div class="col-6">
-          <input type="search" placeholder="Enter city..." class="form-control" id="city-input" />
+          <input type="text" 
+          placeholder="Enter city..." 
+          class="form-control" 
+          autofocus="" 
+          autocomplete="off" 
+          onfocus="this.value=''" 
+          id="city-input" />
         </div>
 
         <div class="col-3">
@@ -60,7 +66,11 @@
         </div>
 
         <div class="col-3">
-          <button type="button" class="btn btn-secondary w-100" id="current-location-button">
+          <button type="button" 
+          class="btn btn-secondary w-100" 
+          id="current-location-button"
+          onclick="document.getElementById('city-input').value = ''"
+          >
             Current location
           </button>
         </div>
