@@ -43,11 +43,12 @@ li:first-letter{
 
 .weather-column{
   color: #70757a;
-  margin-top: 20px;
+  
   font-size: 16px;
   line-height: 16px;
   position: relative;
-  left: 20px;
+  left: 85px;
+  
 }
 
 .city-column{
@@ -71,15 +72,8 @@ li:first-letter{
   left: -2px;
 }
 
-.icon-temperature {
-  text-align: center;
-}
 
-.current-icon{
-  display: block;
-  margin-top: -14px;
-  margin-left: 80px;
-}
+
 
 #city {
   font-size: 24px;
@@ -95,7 +89,7 @@ li:first-letter{
 }
 
 .weather-forecast{
-  margin-top: 35px;
+ margin-top: 35px; 
   text-align: center;
   color: #bababa;
   font-size: 16px;
