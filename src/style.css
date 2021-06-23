@@ -20,7 +20,7 @@ ul{
 
 li{
   list-style: none; /*removes bullet point*/
-  margin: 0;
+  margin: 4px 0;
   padding: 0;
 }
 
@@ -70,6 +70,16 @@ li:first-letter{
   left: -2px;
 }
 
+.icon-temperature {
+  text-align: center;
+}
+
+.current-icon{
+  display: block;
+  margin-top: -14px;
+  margin-left: 80px;
+}
+
 #city {
   font-size: 24px;
   color:#202124;
@@ -96,9 +106,5 @@ li:first-letter{
 
 .max {
   color: #878787 !important;
-}
-
-#humidity, #wind {
-  line-height: 20px;
 }
 
