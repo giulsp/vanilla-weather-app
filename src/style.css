@@ -4,10 +4,12 @@ body {
 }
 
 img{
-  display: inline-block;
+  /*display: inline-block;*/
+  display: block;
+  margin: auto;
   height:60px;
   width:60px;
-  vertical-align: top;
+  /*vertical-align: top;*/
 }
 
 ul{
@@ -35,7 +37,8 @@ li:first-letter{
 
 .weather-column{
   color: #70757a;
-  font-size: 12px;
+  margin-top: 20px;
+  font-size: 16px;
   line-height: 16px;
   position: relative;
   left: 20px;
@@ -90,3 +93,10 @@ li:first-letter{
   color: #878787 !important;
 }
 
+#humidity, #wind {
+  line-height: 20px;
+}
+
+.clearfix {
+  float: left;
+}
