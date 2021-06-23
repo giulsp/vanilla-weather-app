@@ -15,7 +15,7 @@ function formatDate (timestamp){
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days [date.getDay ()];
 
-  return `${day} ${hours}:${minutes}`;
+  return `${day} </br> ${hours}:${minutes}`;
 }
 
 //Real time weather conditions
