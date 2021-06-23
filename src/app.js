@@ -107,21 +107,17 @@ form.addEventListener("submit", handleSubmit);
 search ("Madrid");
 
 //Current Location button - NOT WORKING
-function showPosition (coordinates){
+function showPosition (position){
   let apiKey ="50d24603e09f450a85b01b98d6805e3d";
-  let latitude = coordinates.lat;
-  let longitude = coordinates.lon;
-  let apiUrl =`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function getLocation (event) {
-  event.preventDefault();
+function getLocation () {
   navigator.geolocation.getCurrentPosition (showPosition);
 }
 
 let currentLocationButton = document.querySelector ("#current-location-button");
 currentLocationButton.addEventListener = ("click", getLocation);
-
-showPosition ();
