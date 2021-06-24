@@ -1,7 +1,7 @@
 /*comment*/
 body {
   font-family: arial,sans-serif;
-  background-color: #fff; 
+  background: #fff; 
 }
 
 img{
@@ -37,13 +37,11 @@ li:first-letter{
   /*border: 1px solid #885df1;*/
   /*border-radius: 40px;*/
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) ;
-  background: radial-gradient(circle at 10% 20%, rgb(239, 246, 249) 0%, rgb(206, 239, 253) 90%); 
-
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   }
 
 .weather-column{
   color: #70757a;
-  
   font-size: 16px;
   line-height: 16px;
   position: relative;
@@ -72,9 +70,6 @@ li:first-letter{
   left: -2px;
 }
 
-
-
-
 #city {
   font-size: 24px;
   color:#202124;
@@ -89,9 +84,9 @@ li:first-letter{
 }
 
 .weather-forecast{
- margin-top: 35px; 
+  margin-top: 35px; 
   text-align: center;
-  color: #bababa;
+  color: #70757a;
   font-size: 16px;
 }
 
