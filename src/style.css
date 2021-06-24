@@ -37,7 +37,8 @@ li:first-letter{
   /*border: 1px solid #885df1;*/
   /*border-radius: 40px;*/
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3) ;
-  background:  linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
+  /*background:  linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);*/
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); 
   }
 
 .weather-column{
@@ -57,6 +58,9 @@ li:first-letter{
 
 .code {
   margin-top: 50px;
+  text-align: center;
+  position: relative;
+  bottom: -10px;
 }
 
 .units{
@@ -68,6 +72,7 @@ li:first-letter{
   top: -22px;
   left: -2px;
 }
+
 
 #city {
   font-size: 24px;
